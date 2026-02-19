@@ -1,0 +1,16 @@
+name = "notam-alerter"
+main = "src/index.ts"
+compatibility_date = "2023-04-29"
+
+kv_namespaces = [
+  { binding = "STORAGE", id = "0f04ee56957e4578a6053a715a7c2bb2" }
+]
+
+[triggers]
+crons = [ "0 * * * *" ]
+
+[vars]
+AIRPORT_CODES = "OIIX,OBBB,OMAE,OOM,ORBB,OKAC,OEJD,OLBB,LLLL,OSTT,OJAC,MUFH,TJZS,SVZM,TNCF,MYNA,KZMA,MTEG,MDCS,KICZ"
+DKIM_DOMAIN = "limanovember.aero"
+DKIM_SELECTOR = "mailchannels"
+SENDER_NAME = "LimaNovember.Aero"
